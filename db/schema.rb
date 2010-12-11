@@ -9,14 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101211134745) do
+ActiveRecord::Schema.define(:version => 20101211160121) do
 
   create_table "campaigns", :force => true do |t|
-    t.string "name"
-    t.text   "notes"
-    t.date   "start_date"
-    t.date   "end_date"
-    t.float  "spend_amount"
+    t.string   "name"
+    t.text     "notes"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.float    "spend_amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
