@@ -1,0 +1,11 @@
+<h1>Campaign - <%= @campaign.name %></h1>
+
+<p><strong>Campaign ID:</strong> <%= @campaign.id %></p>
+
+<p><strong>Campaign dates:</strong> From <%= @campaign.start_date.strftime("%d %B %Y") %> to <%= @campaign.end_date.strftime("%d %B %Y") %></p>
+
+<section id="financials">
+	<h3><span class="financial-title">Campaign Spend:</span> $<%= sprintf("%2.f", @campaign.spend_amount) %></h3> 
+	<h3><span class="financial-title">Campaign Revenue:</span></h3>
+	<h3><span class="financial-title">Return on investment:</span></h3>
+</section>

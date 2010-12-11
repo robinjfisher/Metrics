@@ -21,4 +21,8 @@ class Metrics::CampaignsController < ApplicationController
     end
   end
   
+  def show
+    @campaign = Metrics::Campaign.find(params[:id])
+  end
+  
 end

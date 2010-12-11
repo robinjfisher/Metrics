@@ -80,3 +80,15 @@
 	padding: 5px 0;
 	margin: 0 200px 10px 200px;
 }
+
+.metrics #financials h3 {
+	display: inline;
+}
+
+.metrics #financials .financial-title {
+	color: rgb(217,206,178);
+}
+
+.metrics #financials h3:not(:first-of-type) {
+	margin-left: 15px;
+}
