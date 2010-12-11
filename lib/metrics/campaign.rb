@@ -6,6 +6,7 @@ module Metrics
     validates :spend_amount, :presence => true
     
     has_many :campaign_signups
+    has_many :campaign_visits
     
     def revenue
       total = Array.new
@@ -17,6 +18,15 @@ module Metrics
     
     def roi
       ((self.revenue - self.spend_amount) / self.spend_amount) * 100
+    end
+    
+    def visits
+      self.campaign_visits.count
+    end
+    
+    def conversion_rate
+      signups = self.campaign_signups.count
+      (signups.to_f / self.visits.to_f ) * 100
     end
     
   end

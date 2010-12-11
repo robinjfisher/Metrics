@@ -9,13 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101211160928) do
+ActiveRecord::Schema.define(:version => 20101211172443) do
 
   create_table "campaign_signups", :force => true do |t|
     t.integer  "user_id"
     t.integer  "campaign_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "campaign_visits", :force => true do |t|
+    t.integer  "campaign_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "request_ip"
   end
 
   create_table "campaigns", :force => true do |t|

@@ -84,17 +84,21 @@
 }
 
 .metrics #financials {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
-.metrics #financials h3 {
+.metrics .stats h3 {
 	display: inline;
 }
 
-.metrics #financials .financial-title {
+.metrics .stats span {
 	color: rgb(153,178,183);
 }
 
-.metrics #financials h3:not(:first-of-type) {
+.metrics .stats h3:not(:first-of-type) {
 	margin-left: 15px;
+}
+
+.metrics #visits {
+	margin-bottom: 20px;
 }
