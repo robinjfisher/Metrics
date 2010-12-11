@@ -10,4 +10,15 @@ class Metrics::CampaignsController < ApplicationController
     @campaign = Metrics::Campaign.new
   end
   
+  def create
+    @campaign = Metrics::Campaign.new(params[:metrics_campaign])
+    if @campaign.save
+      flash[:notice] = "Campaign added"
+      redirect_to metrics_campaigns_url
+    else
+      flash[:error] = "Could not add campaign"
+      redirect_to new_metrics_campaign_url
+    end
+  end
+  
 end

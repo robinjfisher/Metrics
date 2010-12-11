@@ -11,6 +11,7 @@
 
 .metrics h1 {
 	font-size: 3em;
+	margin-bottom: 1em;
 }
 
 .metrics h2 {
@@ -21,8 +22,16 @@
 	font-size: 2em;
 }
 
+.metrics label {
+	float: left;
+	width: 120px;
+	margin-top: 2px;
+	font-weight: bold;
+}
+
 .metrics p {
 	font-size: 1.4em;
+	margin-bottom: 1em;
 }
 
 .metrics table {
@@ -47,4 +56,27 @@
 	padding: 5px;
 	border-bottom: 1px solid rgb(153,178,183);
 	border-right: 1px solid rgb(153,178,183);
+}
+
+.metrics #new-campaign {
+	float: right;
+	margin-top: 10px;
+}
+
+.metrics #flash_notice {
+	background-color: #65ce6f;
+	border: 1px solid #00cf13;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin: 0 200px 10px 200px;
+}
+
+.metrics #flash_error {
+	background-color: #ff7272;
+	border: 1px solid #ff1515;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin: 0 200px 10px 200px;
 }

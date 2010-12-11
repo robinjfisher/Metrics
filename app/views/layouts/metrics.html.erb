@@ -10,7 +10,15 @@
 	</head>
 	<body class="metrics">
 		<div class="wrapper">
-		<%= yield %>
+			
+			<section id="flash">
+			  <% flash.each do |key, value| -%>
+			    <div id="flash_<%= key %>"><%= value.html_safe %></div>
+			  <% end -%>
+			</section>
+			
+			<%= yield %>
+			
 		</div><!-- .wrapper -->
 	</body>
 </html>
