@@ -16,10 +16,12 @@
 
 .metrics h2 {
 	font-size: 2.4em;
+	margin-bottom: 1em;
 }
 
 .metrics h3 {
 	font-size: 2em;
+	margin-bottom: 1em;
 }
 
 .metrics label {
@@ -81,12 +83,16 @@
 	margin: 0 200px 10px 200px;
 }
 
+.metrics #financials {
+	margin-bottom: 20px;
+}
+
 .metrics #financials h3 {
 	display: inline;
 }
 
 .metrics #financials .financial-title {
-	color: rgb(217,206,178);
+	color: rgb(153,178,183);
 }
 
 .metrics #financials h3:not(:first-of-type) {
