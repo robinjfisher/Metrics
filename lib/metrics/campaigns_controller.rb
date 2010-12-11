@@ -6,4 +6,8 @@ class Metrics::CampaignsController < ApplicationController
     @campaigns = Metrics::Campaign.all
   end
   
+  def new
+    @campaign = Metrics::Campaign.new
+  end
+  
 end

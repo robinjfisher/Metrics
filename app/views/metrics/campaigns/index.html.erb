@@ -1,20 +1,24 @@
 <h1>Campaigns</h1>
 
 <table>
-	<tr>
-		<th>Campaign ID</th>
-		<th>Name</th>
-		<th>Start date</th>
-		<th>End date</th>
-		<th>Spend amount</th>
-	</tr>
+	<thead>
+		<tr>
+			<th scope="col" width="15%">Campaign ID</th>
+			<th scope="col" width="36%">Name</th>
+			<th scope="col" width="17%">Start date</th>
+			<th scope="col" width="17%">End date</th>
+			<th scope="col" width="15%">Spend amount</th>
+		</tr>
+	</thead>
+	<tbody>
 	<% @campaigns.each do |campaign| %>
-	<tr>
-		<td><%= campaign.id %></td>
-		<td><%= campaign.name %></td>
-		<td><%= campaign.start_date %></td>
-		<td><%= campaign.end_date %></td>
-		<td><%= campaign.spend_amount %></td>
-	</tr>
+		<tr>
+			<td><%= campaign.id %></td>
+			<td><%= link_to "#{campaign.name}", metrics_campaign_url(campaign.id) %></td>
+			<td><%= campaign.start_date.strftime("%d %B %Y") %></td>
+			<td><%= campaign.end_date.strftime("%d %B %Y") %></td>
+			<td>$<%= sprintf("%2.f", campaign.spend_amount) %></td>
+		</tr>
 	<% end %>
+	</tbody>
 </table>

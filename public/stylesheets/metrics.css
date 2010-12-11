@@ -1,0 +1,50 @@
+.metrics {
+	font: 62.5% "Helvetica Neue", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-weight: normal;
+	-webkit-text-shadow: 0px -1px 0px rgb(68,68,68);
+}
+
+.metrics .wrapper {
+	width: 960px;
+	margin: 10px auto;
+}
+
+.metrics h1 {
+	font-size: 3em;
+}
+
+.metrics h2 {
+	font-size: 2.4em;
+}
+
+.metrics h3 {
+	font-size: 2em;
+}
+
+.metrics p {
+	font-size: 1.4em;
+}
+
+.metrics table {
+	font-size: 1.4em;
+	border: 1px solid rgb(153,178,183);
+	border-spacing: 0px 0px;
+	width: 100%;
+}
+
+.metrics thead th {
+	padding: 8px 5px;
+	vertical-align: middle;
+	text-align: left;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgb(153,178,183);
+	border-right: 1px solid rgb(153,178,183);
+	background-color: rgb(213,222,217);
+}
+
+.metrics td {
+	font-size: 1.2em;
+	padding: 5px;
+	border-bottom: 1px solid rgb(153,178,183);
+	border-right: 1px solid rgb(153,178,183);
+}
