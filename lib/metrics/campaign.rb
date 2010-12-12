@@ -9,15 +9,23 @@ module Metrics
     has_many :campaign_visits
     
     def revenue
-      total = Array.new
-      self.campaign_signups.each do |signup|
-        total << signup.user.lifetime_value
+      if self.campaign_signups.length > 0
+        total = Array.new
+        self.campaign_signups.each do |signup|
+          total << signup.user.lifetime_value
+        end
+        total.inject{|sum,x| sum + x}
+      else
+        0.00
       end
-      total.inject{|sum,x| sum + x}
     end
     
     def roi
-      ((self.revenue - self.spend_amount) / self.spend_amount) * 100
+      if self.revenue == 0 || self.spend_amount == 0
+        0.00
+      else
+        ((self.revenue - self.spend_amount) / self.spend_amount) * 100
+      end
     end
     
     def visits
@@ -26,7 +34,11 @@ module Metrics
     
     def conversion_rate
       signups = self.campaign_signups.count
-      (signups.to_f / self.visits.to_f ) * 100
+      if signups > 0
+        (signups.to_f / self.visits.to_f ) * 100
+      else
+        0.00
+      end
     end
     
   end
