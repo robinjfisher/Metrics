@@ -5,7 +5,17 @@ class User < ActiveRecord::Base
   end
   
   def lifetime_value
-    678.00
+    # Calculation of lifetime value will depend on your transactional logic
+    # Adopting a pattern of a User having a Subscription and a Subscription
+    # having many Transactions, an example of this calculation is:
+    # 
+    # total = Array.new
+    # self.subscription.transactions.each do |t|
+    #   total << t.amount
+    # end
+    # total.inject{|sum,x| sum + x}
+    
+    60
   end
   
 end
