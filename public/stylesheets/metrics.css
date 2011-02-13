@@ -83,6 +83,15 @@
 	margin: 0 200px 10px 200px;
 }
 
+.metrics #campaign-info {
+	margin: -3em 0 0 0;
+	font-size: 0.8em;
+}
+
+.metrics #campaign-info p {
+	margin-top: -1em;
+}
+
 .metrics #financials {
 	margin-bottom: 10px;
 }
