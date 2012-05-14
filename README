@@ -1,14 +1,3 @@
-The app is still under development. The ideas are based on Ryan Carson's article about metrics over at Think Vitamin.
+Development on this project has been stopped.
 
-http://thinkvitamin.com/business/marketing/how-to-get-more-customers/
-
-In short:
-
-1) Create a campaign. This is an advertising campaign;
-2) For the links to your site on that advertising campaign, append a query string e.g. ?cid=;
-3) The before_filter in application_controller.rb will record the visit and set a cookie;
-4) When a visitor signs up, if they have a cookie, you can record it as a signup via that campaign.
-
-The app calculates some basic metrics on those signups.
-
-The file user_create.rb will create random entries in your db to illustrate the metrics in development.
+I have refactored Metrics into Touchstone. Installable as a gem with better documentation, you can find the repository here on Github at https://github.com/robinjfisher/Touchstone
